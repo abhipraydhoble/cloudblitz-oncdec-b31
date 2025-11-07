@@ -1,4 +1,5 @@
-![Git Logo](https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png) Git
+<img src="https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png" alt="Git Logo" width="150"/>
+
 
 Git is a Version Control System (VCS).
 
