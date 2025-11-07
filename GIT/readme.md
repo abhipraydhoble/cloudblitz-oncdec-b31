@@ -1,16 +1,13 @@
 <img src="https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png" alt="Git Logo" width="150"/>
 
 
-Git is a Version Control System (VCS).
+- Git is a Version Control System (VCS).
 
-Specifically, it’s a Distributed Version Control System (DVCS).
+- Specifically, it’s a Distributed Version Control System (DVCS).
 
-It is used to track changes in code or files over time.
+- It is used to track changes in code or files over time.
 
-Every developer has a full copy of the repository, so you can work offline.
-
-
-
+- Every developer has a full copy of the repository, so you can work offline.
 
 
 
@@ -28,7 +25,48 @@ Every developer has a full copy of the repository, so you can work offline.
 | **Collaboration**       | Developers work on same central repo                                                       | Developers work on local repos, share changes via push/pull                                   |
 | **History Access**      | Only available on server                                                                   | Full history available locally, even offline                                                  |
 
+---
+<img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" width="50"/>
 
+## Clone/Download remote repository 
+````
+git clone https://github.com/abhipraydhoble/project-0001.git
+````
+````
+cd project-0001
+````
+## configure user info
+````
+git config user.name "admin"
+git config user.email "admin@gmail.com"
+````
 
+## create files 
+````
+touch index.html
+touch style.css
+````
+## add files to staging area and commit 
+````
+git status
+git add index.html
+git commit -m "Add hero section to homepage"
+````
+````
+git status
+git add style.html
+git commit -m "Update homepage styles"
+````
+## check commit history
+````
+git log
+````
+
+## push to github
+````
+git push
+````
+- enter github username
+- enter github token
 
 <img width="1152" height="426" alt="image" src="https://github.com/user-attachments/assets/311c5d02-5a49-44e7-b3cf-255632dc5846" />
