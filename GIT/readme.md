@@ -70,3 +70,15 @@ git push
 - enter github token
 
 <img width="1152" height="426" alt="image" src="https://github.com/user-attachments/assets/311c5d02-5a49-44e7-b3cf-255632dc5846" />
+
+
+
+## how to create git token 
+- go to profile section, click on settings
+<img width="1916" height="762" alt="image" src="https://github.com/user-attachments/assets/faecb4e5-f6b0-4161-ad47-e7624af5225e" />
+<img width="1920" height="747" alt="image" src="https://github.com/user-attachments/assets/b4eac6af-0a5e-47ba-850e-6c05e42e857e" />
+- click on developer setting
+<img width="1917" height="720" alt="image" src="https://github.com/user-attachments/assets/27d24c9d-c871-434b-8dd9-9d691bdeb2e8" />
+<img width="1917" height="678" alt="image" src="https://github.com/user-attachments/assets/27656c24-6019-4120-ab8c-9ff5f3be4c72" />
+<img width="1920" height="582" alt="image" src="https://github.com/user-attachments/assets/6d5ebc4c-0bf2-486b-85b6-5d41df50d172" />
+<img width="1916" height="706" alt="image" src="https://github.com/user-attachments/assets/28f9b8f8-1119-40cc-b458-37fffa1aee22" />
