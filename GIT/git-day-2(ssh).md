@@ -1,12 +1,12 @@
-🔐 1. What is SSH in Git?
+# 🔐 1. What is SSH in Git?
 
-SSH (Secure Shell) provides a secure way to connect to remote servers.
+- SSH (Secure Shell) provides a secure way to connect to remote servers.
 
-When you use SSH with GitHub, GitLab, or Bitbucket:
+- When you use SSH with GitHub, GitLab, or Bitbucket:
 
-You don’t need to enter username/password every time.
+- You don’t need to enter username/password every time.
 
-Authentication happens via a public-private key pair.
+- Authentication happens via a public-private key pair.
 
 
 
