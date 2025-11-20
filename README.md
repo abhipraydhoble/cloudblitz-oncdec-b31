@@ -22,16 +22,9 @@
 
  ## Teams:
  - #Development:
-   Frontend Dev:
-   Backend Dev:
-   Full Stack Dev: 
- - #Testing /QA
-  manual:
-  automation: 
--  #Operations: 
-  - set up infrastructure
-  - deploy Application
-  - Monitoring
+ - #Testing/QA
+ -  #Operations: 
+ 
 
   
 
