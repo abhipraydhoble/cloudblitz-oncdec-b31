@@ -39,19 +39,19 @@
 - Monitoring &  maintainance 
 
 ## Methods:
-- #waterfall:
+### waterfall:
  - step by step approch
  - no customer interaction 
  - difficult to make changes once deployed 
  - best for simple projects where requirements are clear 
 
--  #agile: flexible 
+ ### agile: flexible 
  - big task divided into smaller iterations 
  - customer interaction present 
  - easier to make changes 
  - best for complex projects 
 
-- #devops: automation
+  ### devops: automation
  - it helps to automate the process of Software development to deployment
  - it is a combination of two teams Development + Operations
 
