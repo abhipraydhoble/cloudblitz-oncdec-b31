@@ -183,5 +183,3 @@ PROD:  Instance → Docker → Image → Container
 
 Same image → Same result → No mismatch ✔
 
-
-Just tell me!
