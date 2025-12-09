@@ -102,6 +102,7 @@ http://<LoadBalancer-Link>
 👉 Kubernetes creates resources exactly as defined.
 👉 **Best for production, GitHub & DevOps pipelines.**
 
+
 ---
 
 ### 🔹 **Create Pod Using YAML**
