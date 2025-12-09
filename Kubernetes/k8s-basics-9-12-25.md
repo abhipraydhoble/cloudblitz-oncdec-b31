@@ -5,7 +5,9 @@
 ## ✅ **1️⃣ IMPERATIVE APPROACH (Command Based)**
 
 👉 You directly give commands to Kubernetes.
+
 👉 Fast for testing & practice.
+
 👉 **Not recommended for production.**
 
 ---
@@ -99,7 +101,9 @@ http://<LoadBalancer-Link>
 ## ✅ **2️⃣ DECLARATIVE APPROACH (YAML File Based)**
 
 👉 You write everything in a YAML file.
+
 👉 Kubernetes creates resources exactly as defined.
+
 👉 **Best for production, GitHub & DevOps pipelines.**
 
 
