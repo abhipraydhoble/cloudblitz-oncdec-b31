@@ -1,3 +1,5 @@
+<img width="876" height="321" alt="image" src="https://github.com/user-attachments/assets/00ca947a-9165-4e00-b821-410d14e9f468" />
+
 
 ## for_each(list)
 ```hcl
