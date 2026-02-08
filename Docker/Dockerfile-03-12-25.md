@@ -1,195 +1,125 @@
-# 📘 Dockerfile 
-
-## 🔹 What is a Dockerfile?
-A **Dockerfile** is a text document that contains a set of instructions used to build a Docker image.  
-It automates the process of creating images by defining the environment, dependencies, and commands needed to run an application inside a container.
-
-
----
-
-## 🔹 Components of a Dockerfile
-
-1. **FROM**  
-   - Specifies the base image for the container.  
-   - Example:  
-     ```dockerfile
-     FROM ubuntu:20.04
-     ```
-
-2. **MAINTAINER / LABEL**  
-   - Defines metadata about the image creator.  
-   - Example:  
-     ```dockerfile
-     LABEL maintainer="abhipraydh96@gmail.com"
-     ```
-
-3. **RUN**  
-   - Executes commands inside the image while building.  
-   - Example:  
-     ```dockerfile
-     RUN apt-get update && apt-get install -y nginx
-     ```
-
-4. **COPY / ADD**  
-   - Copies files from host machine to the image.  
-   - Example:  
-     ```dockerfile
-     COPY index.html /usr/share/nginx/html/
-     ```
-
-5. **WORKDIR**  
-   - Sets the working directory inside the container.  
-   - Example:  
-     ```dockerfile
-     WORKDIR /app
-     ```
-
-6. **EXPOSE**  
-   - Defines the port number the container listens on.  
-   - Example:  
-     ```dockerfile
-     EXPOSE 80
-     ```
-
-7. **CMD**  
-   - Provides the default command to run when the container starts.  
-   - Example:  
-     ```dockerfile
-     CMD ["nginx", "-g", "daemon off;"]
-     ```
-
-8. **ENTRYPOINT**  
-   - Configures a container to run as an executable.  
-   - Example:  
-     ```dockerfile
-     ENTRYPOINT ["nginx"]
-     ```
-
----
-🧩 Dockerfile Instructions Explained
-````
-        # FROM: define base image
-        # LABEL author="abhipray"
-        # RUN: executes commands during image build
-        # WORKDIR: sets working dir inside cont
-        # COPY: copies file from local machine to container
-        # ADD:  same as copy but it can download  from internet
-        # EXPOSE: shows which port cont will use
-        # ENV: runtime variable
-        # ARG: build time variable
-
-        # CMD: (low priority) runs the app 
-        # ENTRYPOINT :(high priority) same as CMD
-````
-
-
-📝 Create index.html
-
-Create an index.html file with this content:
-````
-<h1>Hello Docker</h1>
-
-````
----
-```Dockerfile
-# Use Amazon Linux as base image
-FROM amazonlinux
-# Install httpd package
-RUN yum update -y 
-RUN yum install -y httpd
-# Copy custom index.html
-COPY index.html /var/www/html/index.html
-# Expose port 80
-EXPOSE 80
-# Run httpd in foreground
-CMD ["httpd", "-D", "FOREGROUND"]
+##  What is an Operating System?
 ```
----
+An Operating System (OS) is system software that acts as an interface between the user and computer hardware.
+It manages CPU, memory, storage, devices, and allows applications to run.
 
-▶️ How to Build & Run
+Examples: Linux, Windows, macOS, Unix
+```
+##Types of Operating Systems
+```
+1 Batch Operating System:
+Jobs are collected and executed in batches
+No user interaction during execution
+Example: Payroll systems
 
-🔹 1. Build Image
-````
-docker build -t my-webserver .
-````
-🔹 2. Run Container
-````
-docker run -d -p 80:80 my-webserver
-````
-🔹 3. Verify
+2 Time-Sharing Operating System:
+Multiple users share CPU time
+Fast response time
+Example: Linux, Unix
 
-Open your browser →
-👉 http://localhost
+3 Distributed Operating System:
+Multiple systems work together as one
+Improves reliability and performance
+Example: Cluster systems
 
-You should see Hello Docker.
----
-## 🔹 Example 2: Dockerfile for **Nginx on Ubuntu**
+4 Network Operating System:
+Manages network resources
+Used in client-server environments
+Example: Linux Server, Windows Server
 
-```Dockerfile
-# Use Ubuntu as base image
-FROM ubuntu:20.04
+5 Real-Time Operating System (RTOS):
+Processes data within strict time limits
+Used in embedded and critical systems
+Example: RTLinux, VxWorks
+```
+## What is a Server?
+```
+A server is a computer or system that provides services, resources, or data to other computers (clients) over a network.
+Examples of Server Types:
+Web Server – Hosts websites
+File Server – Stores and shares files
+Database Server – Manages databases
+Application Server – Runs backend applications
+```
+```
+💡Most production servers use Linux due to its stability, security, and zero licensing cost.
+```
+## Linux vs Windows
 
-# Install Nginx
-RUN apt-get update && \
-    apt-get install -y nginx 
+## Differences:
+```
+| Feature | Linux | Windows |
+|---------|-------|---------|
+| **Cost** | Free & Open Source | Paid |
+| **Source Code** | Open | Closed |
+| **Security** | Very strong | More malware-prone |
+| **Performance** | Lightweight	| Resource heavy |
+| **Customization**	| High	| Limited |
+| **Stability** | Very stable | Needs frequent reboot |
+|** Usage** | Servers, Cloud, DevOps | Desktop, Gaming |
+```
+## Desktop OS vs Server OS
 
-# Copy custom index.html
-COPY index.html /var/www/html/index.html
+## Differences:
+```
+| Feature | Desktop OS | Server OS |
+|---------|-----------|----------|
+| **Purpose** | Personal use | Provide services |
+| **Users**	| Single / Few | Multiple users |
+| **GUI** | Mandatory | Optional |
+| **Performance** | Moderate | High & optimized |
+| **Examples** | Ubuntu Desktop, Windows 11	| RHEL, Ubuntu Server |
+```
+# Linux Architecture
+## Linux Architecture Diagram
 
-# Expose port 80
-EXPOSE 80
+Text Diagram (for reference):
 
-# Run Nginx in foreground
-CMD ["nginx", "-g", "daemon off;"]
+
+|   User Applications  |
+|----------------------|
+|       Shell          |
+|----------------------|
+| System Libraries     |
+|----------------------|
+|       Kernel         |
+|----------------------|
+|      Hardware        |
+
+
+## Linux Architecture Components
+## a. Hardware
+```
+Physical components like CPU, RAM, disk, network devices
+```
+## b. Kernel
+```
+Core of Linux OS
+Manages:Process scheduling, Memory management, Device drivers, File systems
+```
+## c. System Libraries
+```
+Provide functions used by applications
+Help applications interact with the kernel
+```
+## d. Shell
+```
+Command-line interface
+Acts as a bridge between user and kernel
+Examples: bash, sh, zsh
+```
+## e. User Applications
+```
+Software used by users
+Examples: browsers, editors, servers
 ```
 
----
-## 🔹 Example 3: Dockerfile for **Tomcat Server on Ubuntu**
-
-```Dockerfile
-FROM ubuntu:20.04
-RUN apt update -y
-RUN apt install  openjdk-11-jdk -y
-WORKDIR /opt/tomcat
-EXPOSE 8080 
-ADD https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.90/bin/apache-tomcat-9.0.90.tar.gz  /opt/tomcat
-RUN tar -xzf apache-tomcat-9.0.90.tar.gz -C /opt/tomcat
-ADD https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war /opt/tomcat/apache-tomcat-9.0.90/webapps/
-CMD ["apache-tomcat-9.0.90/bin/catalina.sh","run"]
+## Popular Linux Distributions:
 ```
----
-## 🔹 Example 4: Dockerfile for **Database**
-```Dockerfile
-FROM mariadb
-WORKDIR /usr/local/bin/
-ENV MARIADB_ROOT_PASSWORD=1234
-COPY student-rds.sql /docker-entrypoint-initdb.d/
-CMD ["mariadbd"]
+Ubuntu – Beginner-friendly, desktop & server
+Red Hat Enterprise Linux (RHEL) – Enterprise use
+CentOS / Rocky Linux – RHEL-based free distros
+Debian – Stable and secure
+Kali Linux – Cybersecurity & penetration testing
+Amazon Linux – Optimized for AWS
 ```
----
-## 🔹 Example 5: Dockerfile for **python app**
-```Dockerfile
-FROM python:3.11-alpine
-
-WORKDIR /app
-
-COPY main.py .
-
-CMD ["python", "main.py"]
-```
----
-## 🔹 Example 5: Dockerfile for **nodejs**
-```Dockerfile
-FROM node:18-alpine
-
-WORKDIR /app
-
-COPY package*.json ./
-RUN npm install
-
-COPY . .
-
-EXPOSE 3000
-CMD ["npm", "start"]
-```
----
